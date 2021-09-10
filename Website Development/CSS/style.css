@@ -1,0 +1,482 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Putting img background in my header*/
+header {
+    height: 90vh;
+}
+
+.container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 90vh;
+    animation: animate 16s ease-in-out infinite;
+    background-size: cover;
+}
+
+.outer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 90vh;
+    background: rgb(0,0,0,0.5);
+}
+
+.details {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.details h1 {
+    font-size: 5em;
+    color: #fff;
+}
+
+@keyframes animate {
+    0%,100%{
+        background-image: url(../website/Photos/photo1.jpg);
+    }
+    30%{
+        background-image: url(../website/Photos/photo2.jpeg);
+    }
+    75%{
+        background-image: url(../website/Photos/photo3.jpg);
+    }
+}
+
+/*Nav looks and design*/
+nav {
+    height: 10vh; 
+    padding: 10px 10px 10px 10px;
+    text-align: left;
+    border-radius: 10px;
+    box-shadow: 1px 3px #E56B1F;
+    margin-bottom: 10px;
+}
+
+.search, .input {
+    font-size: 20px;
+    float: right;
+}
+
+.search {
+    margin-right: 30%;
+}
+
+.shopping {
+    color: black;
+}
+
+.cart {
+    position: relative;
+    float: right;
+    margin-right: 10px;
+    font-size: 36px;
+}
+
+nav ul li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    font-family: 'oswald', sans-serif;
+    font-size: 20px;
+}
+
+nav ul li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 5px 16px;
+    text-decoration: none;
+    float: left;
+}
+
+.active {
+    background-color: #E56B1F;
+    color: white;
+}
+
+nav ul li a:hover:not(.active) {
+    color: #E56B1F;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+/*My section area*/
+.row1 {
+    min-height: 70vh;
+    margin: 5px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.col1-1{
+    flex: 1;/*take up 1 portion*/
+    min-height: 70vh;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 3px 3px lightgray;
+    background-image: url(../website/Photos/index-photo/intro.jpg);
+    background-size: 100% 100%;
+}
+
+.line {
+    height: 10px;
+    border-width: 10px;
+    color: gray;
+    background-color: gray;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row2 {
+    min-height: 40vh;
+    margin: 5px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.col2-1, .col2-2 {
+    flex: 2;
+    min-height: 40vh;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.row3 {
+    min-height: 40vh;
+    margin: 5px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.col3-1, .col3-2 {
+    flex: 2;
+    min-height: 40vh;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.photo {
+    border: 2px solid  lightgray;
+    width: 60%;
+    height: 50%;
+    margin-left: 20%;
+}
+
+.photo-gallery {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+}
+
+.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+    flex: 1;
+    min-height: 300px;
+    background-color: #e0e0e0;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 5px 5px #a8a8a8;
+}
+
+.gallery:hover {
+    border: 2px solid #777;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+.photo-gallery1 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+}
+
+.gallery-h1 {
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    margin-top: 10px;
+}
+
+.gallery1 {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 600px;
+    flex: 1;
+    min-height: 300px;
+    background-color: #e0e0e0;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 5px 5px #a8a8a8;
+}
+
+.gallery1 img {
+    width: 50%;
+    height: auto;
+}
+
+.desc1 {
+    margin-right: 50px;
+    position: relative;
+    float: right;
+}
+
+.add-cart {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.add-cart:hover {
+    opacity: 0.7;
+}
+
+/*Shopping Cart*/
+.row-cart {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    margin: 0 -16px;
+}
+  
+.col-25 {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+}
+  
+.col-50 {
+    -ms-flex: 50%; /* IE10 */
+    flex: 50%;
+}
+  
+.col-75 {
+    -ms-flex: 75%; /* IE10 */
+    flex: 75%;
+}
+  
+.col-25,
+.col-50,
+.col-75 {
+    padding: 0 16px;
+}
+  
+.container-cart {
+    background-color: #f2f2f2;
+    padding: 5px 20px 15px 20px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+}
+  
+.input1[type=text] {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+  
+label {
+    margin-bottom: 10px;
+    display: block;
+}
+  
+.icon-container {
+    margin-bottom: 20px;
+    padding: 7px 0;
+    font-size: 24px;
+}
+  
+.btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 17px;
+}
+  
+.btn:hover {
+    background-color: #45a049;
+}
+  
+span.price {
+    float: right;
+    color: grey;
+}
+  
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+    .row-cart {
+      flex-direction: column-reverse;
+}
+    .col-25 {
+      margin-bottom: 20px;
+}
+}
+
+/*About us*/
+.column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+}
+  
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+}
+  
+.about-section {
+    padding: 50px;
+    background-color: #474e5d;
+    color: white;
+    height: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+  
+.about-container {
+    padding: 0 16px;
+}
+  
+.about-container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+  
+.title {
+    color: grey;
+}
+  
+.button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+}
+  
+.button:hover {
+    background-color: #555;
+}
+  
+@media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+}
+}
+
+/* Style inputs */
+.contact[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+  
+.contact[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+}
+  
+.contact[type=submit]:hover {
+    background-color: #45a049;
+}
+  
+  /* Style the container/contact section */
+.contact-container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px;
+}
+  
+/* Create two columns that float next to eachother */
+.column-contact {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+}
+  
+/* Clear floats after the columns */
+.row-contact:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column-contact, .contact[type=submit] {
+      width: 100%;
+      margin-top: 0;
+}
+}
+
+footer {
+    background-color: #E56B1F;
+    height: 10vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

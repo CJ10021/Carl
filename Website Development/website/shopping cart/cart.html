@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Homepage</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../../CSS/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body>
+        <header>
+            <div class="container">
+                <div class="outer">
+                    <div class="details">
+                        <h1>CJ Clothing Store</h1>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="../index/index.html" class="">Homepage</a></li>
+                <li><a href="../men/men.html" class="">Men</a></li>
+                <li><a href="../women/women.html" class="">Women</a></li>
+                <li><a href="../About us/About us.html" class="">About Us</a></li>
+                <a href="../shopping cart/cart.html" class="shopping"><button class="cart"><i class="fa fa-shopping-cart"></i></a>
+            </ul>
+        </nav>
+        
+        <main>
+           <section>
+            <div class="row-cart">
+                <div class="col-75">
+                  <div class="container-cart">
+
+                    <div class="row-cart">
+                        <div class="col-50">
+                          <h3>Billing Address</h3>
+                          <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                          <input class="input1" type="text" id="fname" name="firstname" placeholder="Name">
+                          <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                          <input class="input1" type="text" id="email" name="email" placeholder="name@example.com">
+                          <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                          <input class="input1" type="text" id="adr" name="address" placeholder="Address">
+                          <label for="city"><i class="fa fa-institution"></i> City</label>
+                          <input class="input1" type="text" id="city" name="city" placeholder="City">
+
+                          <div class="row-cart">
+                            <div class="col-50">
+                              <label for="state">State</label>
+                              <input class="input1" type="text" id="state" name="state" placeholder="NZ">
+                            </div>
+                            <div class="col-50">
+                              <label for="zip">Zip</label>
+                              <input class="input1" type="text" id="zip" name="zip" placeholder="10001">
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-50">
+                            <h3>Payment</h3>
+                            <label for="fname">Accepted Cards</label>
+                            <div class="icon-container">
+                              <i class="fa fa-cc-visa" style="color:navy;"></i>
+                              <i class="fa fa-cc-amex" style="color:blue;"></i>
+                              <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                              <i class="fa fa-cc-discover" style="color:orange;"></i>
+                            </div>
+                            <label for="cname">Name on Card</label>
+            <input class="input1" type="text" id="cname" name="cardname" placeholder="Name">
+            <label for="ccnum">Credit card number</label>
+            <input class="input1" type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+            <label for="expmonth">Exp Month</label>
+            <input class="input1" type="text" id="expmonth" name="expmonth" placeholder="Month">
+
+            <div class="row-cart">
+                <div class="col-50">
+                  <label for="expyear">Exp Year</label>
+                  <input class="input1" type="text" id="expyear" name="expyear" placeholder="Year">
+                </div>
+                <div class="col-50">
+                  <label for="cvv">CVV</label>
+                  <input class="input1" type="text" id="cvv" name="cvv" placeholder="000">
+
+                </div>
+                <label>
+                  <input class="input1" type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+                </label>
+                <input type="submit" value="Continue to checkout" class="btn">
+              </form>
+            </div>
+          </div>
+
+          <div class="col-25">
+            <div class="container-cart">
+              <h4>Cart
+                <span class="price" style="color:black">
+                  <i class="fa fa-shopping-cart"></i>
+                  <b></b>
+                </span>
+              </h4>
+              <hr>
+              <script src="../../JS/javascript.js"></script>
+              <p id="shopping-cart-items"></p>
+              <script>
+                retrieveSelectedItems();
+              </script>
+            </div>
+          </div>
+        </div>
+                </div>
+              </div>
+            </div>
+           </section>
+        </main>
+
+        <footer>
+            Website Development <br>
+            Created by Carl Henry @ EIT
+        </footer>
+    </body>
+</html>
